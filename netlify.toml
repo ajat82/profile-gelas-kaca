@@ -1,0 +1,16 @@
+# netlify.toml
+# This is the standard configuration file for deploying a Next.js site on Netlify.
+
+[build]
+  # Command to build the site. Netlify will run this in its build environment.
+  command = "npm install && npm run build"
+  
+  # The directory that Netlify will publish.
+  # For Next.js, this is always the ".next" directory.
+  publish = ".next"
+
+[[plugins]]
+  # This is the official Netlify plugin for Next.js.
+  # It automatically configures redirects, serverless functions for SSR,
+  # and other Next.js-specific features.
+  package = "@netlify/plugin-nextjs"
